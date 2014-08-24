@@ -5,11 +5,13 @@
 # Home page
 GET     /                           controllers.Application.index
 
-GET /products controllers.Products.list
+GET /login/index.html         controllers.Login.createStateToken
 
 GET /math/language/:code      controllers.CookieLang.switch(code:String)
 GET /math/problem/:id         controllers.Math.problem(id:String)
 GET /math     controllers.Math.list
+
+GET /products controllers.Products.list
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
