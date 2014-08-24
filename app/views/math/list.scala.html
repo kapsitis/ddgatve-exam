@@ -1,0 +1,12 @@
+@(solutions: List[Solution])(implicit lang: Lang)
+
+@main("40. Atklātā matemātikas olimpiāde (2013-04-28)") {
+  <table class="math">
+    @for(solution <- solutions) {
+      <tr><td><a href="/math/problem/@(solution.publicId).html">@solution.title</a>
+      &nbsp;&nbsp; @(Solution.shortenDescription(solution.description))
+      </td></tr>
+      
+    }
+  </table>
+} 
