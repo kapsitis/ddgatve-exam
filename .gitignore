@@ -1,0 +1,9 @@
+/bin
+/logs
+/project/project
+/project/target
+/target
+/.cache
+/.history
+/.settings
+
