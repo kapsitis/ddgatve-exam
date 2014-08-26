@@ -11,7 +11,8 @@ import java.util.Scanner
 object Login extends Controller {
   val APPLICATION_NAME = "ddgatve-math"
   val CLIENT_ID = "142624243903-vflqmb5336fmenqihfs41rokt42sbrt3.apps.googleusercontent.com"
-
+  val REDIRECT_URI = "http://www.dudajevagatve.lv/oauth2callback"
+  val LOGIN_HINT = "jsmith@example.com"
 
   def createStateToken = Action {
     // Create a state token to prevent request forgery.
@@ -28,7 +29,7 @@ object Login extends Controller {
 //        .replaceAll("[{]{2}\\s*APPLICATION_NAME\\s*[}]{2}",
 //          APPLICATION_NAME);
       val solutions = Solution.findAll
-      Ok(views.html.login.login("AAA", "BBB"))
+      Ok(views.html.login.login(state, CLIENT_ID, REDIRECT_URI, LOGIN_HINT))
 
   }
 } 
