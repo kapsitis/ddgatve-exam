@@ -3,13 +3,13 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /main/index.html                          controllers.Application.index
 
 GET /login/index.html         controllers.Login.createStateToken
 
 GET /math/language/:code      controllers.CookieLang.switch(code:String)
 GET /math/problem/:id         controllers.Math.problem(id:String)
-GET /math     controllers.Math.list
+GET /math/index.html     controllers.Math.list
 
 GET /products controllers.Products.list
 
