@@ -1,13 +1,4 @@
-/bin
-/lib
-/libs-sources
-/logs
-/project/project
-/project/target
-/target
-/trash
-/.cache
-/.history
-/.settings
-/lib/*.jar
-/lib/*.properties
+.classpath
+.project
+ppt-to-pdf/src/main/resources/
+ppt-to-pdf/target/

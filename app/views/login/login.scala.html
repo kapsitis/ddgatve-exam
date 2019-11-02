@@ -1,7 +1,0 @@
-@(state:String, clientId:String, redirectUri: String, loginHint:String)(implicit lang: Lang)
-
-@main("40. Atklātā matemātikas olimpiāde (2013-04-28)") {
-  State is @(state)<br />
-  
-  <a href="https://accounts.google.com/o/oauth2/auth?client_id=@(clientId)&response_type=code&scope=openid%20email&redirect_uri=@(redirectUri)&state=security_token%3D@(state)%26url%3Dhttp://www.dudajevagatve.lv/main/index.html&login_hint=@(loginHint)&openid.realm=www.dudajevagatve.lv">Sign In for Real</a>
-} 
