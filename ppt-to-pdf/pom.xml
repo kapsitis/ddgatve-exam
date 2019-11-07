@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>some.name</groupId>
+	<groupId>com.example.ppt2pdf.convert</groupId>
 	<artifactId>some-name</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<name>some-name</name>
+	<name>ppt2pdf-convert</name>
 	<url>http://www.example.com</url>
 
 	<properties>

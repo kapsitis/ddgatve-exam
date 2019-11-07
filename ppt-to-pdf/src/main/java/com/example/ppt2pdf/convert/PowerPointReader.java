@@ -1,4 +1,4 @@
-package some.name;
+package com.example.ppt2pdf.convert;
 
 import java.awt.Dimension;
 import java.io.FileInputStream;
@@ -24,16 +24,17 @@ import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
  */
 public class PowerPointReader {   
 	  
-	//static String destDir = "/home/kalvis/Documents/DLP-course-v85/"; 
 	static String destDir = "src/main/resources/";
 	static String srcDir = "src/main/resources/";
 	
 	static List<String> fileNames = Arrays.asList(new String[] { "DataAdmin1-v85", 
 			"DataAdmin2-v85", "DataAdmin3-v85", "DataAdmin4-v85" });
 
-	static boolean includeBibliography = false;
-		
+	/**
+	 * Entry point: Receives flags and a list of PPTX files to convert. 
+	 */
 	public static void main(String[] args) throws IOException {
+		
 	  
 		StringBuffer labSb = new StringBuffer();
 		for (String fileName: fileNames) {

@@ -1,4 +1,4 @@
-package some.name;
+package com.example.ppt2pdf.convert;
 
 import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
 import org.apache.poi.sl.usermodel.AutoNumberingScheme;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class RichTextExpr {
 	
-	private List<WikiLine> wikiLines = new ArrayList<WikiLine>();
+	private List<RichTextEnum> wikiLines = new ArrayList<RichTextEnum>();
 
 	public RichTextExpr(List<XSLFTextParagraph> pars) {
 		for (XSLFTextParagraph par: pars) {
@@ -30,7 +30,7 @@ public class RichTextExpr {
 			} else if (par.getText().matches("^[a-z]\\. .*")) {
 				enumType = 3;
 			}
-			wikiLines.add(new WikiLine(par, enumType));
+			wikiLines.add(new RichTextEnum(par, enumType));
 		}
 	}
 
@@ -38,7 +38,7 @@ public class RichTextExpr {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		int prevEnumType = 0;
-		for (WikiLine wikiLine: wikiLines) {
+		for (RichTextEnum wikiLine: wikiLines) {
 			if (wikiLine.getEnumType() != prevEnumType) {
 				sb.append("\r\n");
 			}

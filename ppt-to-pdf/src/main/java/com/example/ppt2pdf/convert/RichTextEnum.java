@@ -1,4 +1,4 @@
-package some.name;
+package com.example.ppt2pdf.convert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +6,16 @@ import java.util.List;
 import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
 import org.apache.poi.xslf.usermodel.XSLFTextRun;
 
-public class WikiLine {
+public class RichTextEnum {
 
-	private List<WikiRun> runs;
+	private List<RichTextInline> runs;
 	private int enumType;
 
-	public WikiLine(XSLFTextParagraph para, int enumType) {
+	public RichTextEnum(XSLFTextParagraph para, int enumType) {
 		this.enumType = enumType;
-		runs = new ArrayList<WikiRun>();
+		runs = new ArrayList<RichTextInline>();
 		for (XSLFTextRun run : para.getTextRuns()) {
-			runs.add(new WikiRun(run.getRawText(), run.isBold(), run.isItalic()));
+			runs.add(new RichTextInline(run.getRawText(), run.isBold(), run.isItalic()));
 		}
 	}
 	
@@ -26,7 +26,7 @@ public class WikiLine {
 	@Override
 	public String toString() {
 		StringBuffer sbResult = new StringBuffer();
-		for (WikiRun wr : runs) {
+		for (RichTextInline wr : runs) {
 			sbResult.append(wr.toString());
 		}
 		String result = sbResult.toString();

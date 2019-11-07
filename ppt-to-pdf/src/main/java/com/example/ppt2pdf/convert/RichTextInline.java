@@ -1,11 +1,11 @@
-package some.name;
+package com.example.ppt2pdf.convert;
 
-public class WikiRun {
+public class RichTextInline {
 	private String normText;
 	private boolean isBold;
 	private boolean isItalic;
 	
-	public WikiRun(String text, boolean isBold, boolean isItalic) {
+	public RichTextInline(String text, boolean isBold, boolean isItalic) {
 		this.normText = text;
 		this.isBold = isBold;
 		this.isItalic = isItalic;
